@@ -1,0 +1,210 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <Configurations>Debug;Release;Gorilla</Configurations>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>pdbonly</DebugType>
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Gorilla|AnyCPU'">
+    <DebugType>pdbonly</DebugType>
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="beep.mp3" />
+    <None Remove="Sounds\A0.mp3" />
+    <None Remove="Sounds\A1.mp3" />
+    <None Remove="Sounds\A2.mp3" />
+    <None Remove="Sounds\A3.mp3" />
+    <None Remove="Sounds\A4.mp3" />
+    <None Remove="Sounds\A5.mp3" />
+    <None Remove="Sounds\A6.mp3" />
+    <None Remove="Sounds\A7.mp3" />
+    <None Remove="Sounds\Ab1.mp3" />
+    <None Remove="Sounds\Ab2.mp3" />
+    <None Remove="Sounds\Ab3.mp3" />
+    <None Remove="Sounds\Ab4.mp3" />
+    <None Remove="Sounds\Ab5.mp3" />
+    <None Remove="Sounds\Ab6.mp3" />
+    <None Remove="Sounds\Ab7.mp3" />
+    <None Remove="Sounds\B0.mp3" />
+    <None Remove="Sounds\B1.mp3" />
+    <None Remove="Sounds\B2.mp3" />
+    <None Remove="Sounds\B3.mp3" />
+    <None Remove="Sounds\B4.mp3" />
+    <None Remove="Sounds\B5.mp3" />
+    <None Remove="Sounds\B6.mp3" />
+    <None Remove="Sounds\B7.mp3" />
+    <None Remove="Sounds\Bb0.mp3" />
+    <None Remove="Sounds\Bb1.mp3" />
+    <None Remove="Sounds\Bb2.mp3" />
+    <None Remove="Sounds\Bb3.mp3" />
+    <None Remove="Sounds\Bb4.mp3" />
+    <None Remove="Sounds\Bb5.mp3" />
+    <None Remove="Sounds\Bb6.mp3" />
+    <None Remove="Sounds\Bb7.mp3" />
+    <None Remove="Sounds\C1.mp3" />
+    <None Remove="Sounds\C2.mp3" />
+    <None Remove="Sounds\C3.mp3" />
+    <None Remove="Sounds\C4.mp3" />
+    <None Remove="Sounds\C5.mp3" />
+    <None Remove="Sounds\C6.mp3" />
+    <None Remove="Sounds\C7.mp3" />
+    <None Remove="Sounds\C8.mp3" />
+    <None Remove="Sounds\D1.mp3" />
+    <None Remove="Sounds\D2.mp3" />
+    <None Remove="Sounds\D3.mp3" />
+    <None Remove="Sounds\D4.mp3" />
+    <None Remove="Sounds\D5.mp3" />
+    <None Remove="Sounds\D6.mp3" />
+    <None Remove="Sounds\D7.mp3" />
+    <None Remove="Sounds\Db1.mp3" />
+    <None Remove="Sounds\Db2.mp3" />
+    <None Remove="Sounds\Db3.mp3" />
+    <None Remove="Sounds\Db4.mp3" />
+    <None Remove="Sounds\Db5.mp3" />
+    <None Remove="Sounds\Db6.mp3" />
+    <None Remove="Sounds\Db7.mp3" />
+    <None Remove="Sounds\Db8.mp3" />
+    <None Remove="Sounds\E1.mp3" />
+    <None Remove="Sounds\E2.mp3" />
+    <None Remove="Sounds\E3.mp3" />
+    <None Remove="Sounds\E4.mp3" />
+    <None Remove="Sounds\E5.mp3" />
+    <None Remove="Sounds\E6.mp3" />
+    <None Remove="Sounds\E7.mp3" />
+    <None Remove="Sounds\Eb1.mp3" />
+    <None Remove="Sounds\Eb2.mp3" />
+    <None Remove="Sounds\Eb3.mp3" />
+    <None Remove="Sounds\Eb4.mp3" />
+    <None Remove="Sounds\Eb5.mp3" />
+    <None Remove="Sounds\Eb6.mp3" />
+    <None Remove="Sounds\Eb7.mp3" />
+    <None Remove="Sounds\F1.mp3" />
+    <None Remove="Sounds\F2.mp3" />
+    <None Remove="Sounds\F3.mp3" />
+    <None Remove="Sounds\F4.mp3" />
+    <None Remove="Sounds\F5.mp3" />
+    <None Remove="Sounds\F6.mp3" />
+    <None Remove="Sounds\F7.mp3" />
+    <None Remove="Sounds\G1.mp3" />
+    <None Remove="Sounds\G2.mp3" />
+    <None Remove="Sounds\G3.mp3" />
+    <None Remove="Sounds\G4.mp3" />
+    <None Remove="Sounds\G5.mp3" />
+    <None Remove="Sounds\G6.mp3" />
+    <None Remove="Sounds\G7.mp3" />
+    <None Remove="Sounds\Gb1.mp3" />
+    <None Remove="Sounds\Gb2.mp3" />
+    <None Remove="Sounds\Gb3.mp3" />
+    <None Remove="Sounds\Gb4.mp3" />
+    <None Remove="Sounds\Gb5.mp3" />
+    <None Remove="Sounds\Gb6.mp3" />
+    <None Remove="Sounds\Gb7.mp3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="beep.mp3" />
+    <EmbeddedResource Include="Sounds\A0.mp3" />
+    <EmbeddedResource Include="Sounds\A1.mp3" />
+    <EmbeddedResource Include="Sounds\A2.mp3" />
+    <EmbeddedResource Include="Sounds\A3.mp3" />
+    <EmbeddedResource Include="Sounds\A4.mp3" />
+    <EmbeddedResource Include="Sounds\A5.mp3" />
+    <EmbeddedResource Include="Sounds\A6.mp3" />
+    <EmbeddedResource Include="Sounds\A7.mp3" />
+    <EmbeddedResource Include="Sounds\Ab1.mp3" />
+    <EmbeddedResource Include="Sounds\Ab2.mp3" />
+    <EmbeddedResource Include="Sounds\Ab3.mp3" />
+    <EmbeddedResource Include="Sounds\Ab4.mp3" />
+    <EmbeddedResource Include="Sounds\Ab5.mp3" />
+    <EmbeddedResource Include="Sounds\Ab6.mp3" />
+    <EmbeddedResource Include="Sounds\Ab7.mp3" />
+    <EmbeddedResource Include="Sounds\B0.mp3" />
+    <EmbeddedResource Include="Sounds\B1.mp3" />
+    <EmbeddedResource Include="Sounds\B2.mp3" />
+    <EmbeddedResource Include="Sounds\B3.mp3" />
+    <EmbeddedResource Include="Sounds\B4.mp3" />
+    <EmbeddedResource Include="Sounds\B5.mp3" />
+    <EmbeddedResource Include="Sounds\B6.mp3" />
+    <EmbeddedResource Include="Sounds\B7.mp3" />
+    <EmbeddedResource Include="Sounds\Bb0.mp3" />
+    <EmbeddedResource Include="Sounds\Bb1.mp3" />
+    <EmbeddedResource Include="Sounds\Bb2.mp3" />
+    <EmbeddedResource Include="Sounds\Bb3.mp3" />
+    <EmbeddedResource Include="Sounds\Bb4.mp3" />
+    <EmbeddedResource Include="Sounds\Bb5.mp3" />
+    <EmbeddedResource Include="Sounds\Bb6.mp3" />
+    <EmbeddedResource Include="Sounds\Bb7.mp3" />
+    <EmbeddedResource Include="Sounds\C1.mp3" />
+    <EmbeddedResource Include="Sounds\C2.mp3" />
+    <EmbeddedResource Include="Sounds\C3.mp3" />
+    <EmbeddedResource Include="Sounds\C4.mp3" />
+    <EmbeddedResource Include="Sounds\C5.mp3" />
+    <EmbeddedResource Include="Sounds\C6.mp3" />
+    <EmbeddedResource Include="Sounds\C7.mp3" />
+    <EmbeddedResource Include="Sounds\C8.mp3" />
+    <EmbeddedResource Include="Sounds\D1.mp3" />
+    <EmbeddedResource Include="Sounds\D2.mp3" />
+    <EmbeddedResource Include="Sounds\D3.mp3" />
+    <EmbeddedResource Include="Sounds\D4.mp3" />
+    <EmbeddedResource Include="Sounds\D5.mp3" />
+    <EmbeddedResource Include="Sounds\D6.mp3" />
+    <EmbeddedResource Include="Sounds\D7.mp3" />
+    <EmbeddedResource Include="Sounds\Db1.mp3" />
+    <EmbeddedResource Include="Sounds\Db2.mp3" />
+    <EmbeddedResource Include="Sounds\Db3.mp3" />
+    <EmbeddedResource Include="Sounds\Db4.mp3" />
+    <EmbeddedResource Include="Sounds\Db5.mp3" />
+    <EmbeddedResource Include="Sounds\Db6.mp3" />
+    <EmbeddedResource Include="Sounds\Db7.mp3" />
+    <EmbeddedResource Include="Sounds\Db8.mp3" />
+    <EmbeddedResource Include="Sounds\E1.mp3" />
+    <EmbeddedResource Include="Sounds\E2.mp3" />
+    <EmbeddedResource Include="Sounds\E3.mp3" />
+    <EmbeddedResource Include="Sounds\E4.mp3" />
+    <EmbeddedResource Include="Sounds\E5.mp3" />
+    <EmbeddedResource Include="Sounds\E6.mp3" />
+    <EmbeddedResource Include="Sounds\E7.mp3" />
+    <EmbeddedResource Include="Sounds\Eb1.mp3" />
+    <EmbeddedResource Include="Sounds\Eb2.mp3" />
+    <EmbeddedResource Include="Sounds\Eb3.mp3" />
+    <EmbeddedResource Include="Sounds\Eb4.mp3" />
+    <EmbeddedResource Include="Sounds\Eb5.mp3" />
+    <EmbeddedResource Include="Sounds\Eb6.mp3" />
+    <EmbeddedResource Include="Sounds\Eb7.mp3" />
+    <EmbeddedResource Include="Sounds\F1.mp3" />
+    <EmbeddedResource Include="Sounds\F2.mp3" />
+    <EmbeddedResource Include="Sounds\F3.mp3" />
+    <EmbeddedResource Include="Sounds\F4.mp3" />
+    <EmbeddedResource Include="Sounds\F5.mp3" />
+    <EmbeddedResource Include="Sounds\F6.mp3" />
+    <EmbeddedResource Include="Sounds\F7.mp3" />
+    <EmbeddedResource Include="Sounds\G1.mp3" />
+    <EmbeddedResource Include="Sounds\G2.mp3" />
+    <EmbeddedResource Include="Sounds\G3.mp3" />
+    <EmbeddedResource Include="Sounds\G4.mp3" />
+    <EmbeddedResource Include="Sounds\G5.mp3" />
+    <EmbeddedResource Include="Sounds\G6.mp3" />
+    <EmbeddedResource Include="Sounds\G7.mp3" />
+    <EmbeddedResource Include="Sounds\Gb1.mp3" />
+    <EmbeddedResource Include="Sounds\Gb2.mp3" />
+    <EmbeddedResource Include="Sounds\Gb3.mp3" />
+    <EmbeddedResource Include="Sounds\Gb4.mp3" />
+    <EmbeddedResource Include="Sounds\Gb5.mp3" />
+    <EmbeddedResource Include="Sounds\Gb6.mp3" />
+    <EmbeddedResource Include="Sounds\Gb7.mp3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Plugin.BLE" Version="2.2.0-pre2" />
+    <PackageReference Include="Xam.Plugin.SimpleAudioPlayer" Version="1.3.1" />
+    <PackageReference Include="Xamarin.Forms" Version="4.1.0.555618" />
+    <PackageReference Include="Xamarin.Essentials" Version="1.1.0" />
+  </ItemGroup>
+</Project>

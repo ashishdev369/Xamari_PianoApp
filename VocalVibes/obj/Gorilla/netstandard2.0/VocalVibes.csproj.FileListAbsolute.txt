@@ -1,0 +1,11 @@
+C:\Users\Admin\source\repos\VocalVibes\VocalVibes\VocalVibes\bin\Gorilla\netstandard2.0\VocalVibes.deps.json
+C:\Users\Admin\source\repos\VocalVibes\VocalVibes\VocalVibes\bin\Gorilla\netstandard2.0\VocalVibes.dll
+C:\Users\Admin\source\repos\VocalVibes\VocalVibes\VocalVibes\bin\Gorilla\netstandard2.0\VocalVibes.pdb
+C:\Users\Admin\source\repos\VocalVibes\VocalVibes\VocalVibes\obj\Gorilla\netstandard2.0\App.xaml.g.cs
+C:\Users\Admin\source\repos\VocalVibes\VocalVibes\VocalVibes\obj\Gorilla\netstandard2.0\MainPage.xaml.g.cs
+C:\Users\Admin\source\repos\VocalVibes\VocalVibes\VocalVibes\obj\Gorilla\netstandard2.0\VocalVibes.csproj.CoreCompileInputs.cache
+C:\Users\Admin\source\repos\VocalVibes\VocalVibes\VocalVibes\obj\Gorilla\netstandard2.0\VocalVibes.AssemblyInfoInputs.cache
+C:\Users\Admin\source\repos\VocalVibes\VocalVibes\VocalVibes\obj\Gorilla\netstandard2.0\VocalVibes.AssemblyInfo.cs
+C:\Users\Admin\source\repos\VocalVibes\VocalVibes\VocalVibes\obj\Gorilla\netstandard2.0\XamlC.stamp
+C:\Users\Admin\source\repos\VocalVibes\VocalVibes\VocalVibes\obj\Gorilla\netstandard2.0\VocalVibes.dll
+C:\Users\Admin\source\repos\VocalVibes\VocalVibes\VocalVibes\obj\Gorilla\netstandard2.0\VocalVibes.pdb

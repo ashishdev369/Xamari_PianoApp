@@ -1,0 +1,1335 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:local="clr-namespace:VocalVibes"
+             mc:Ignorable="d"
+             x:Class="VocalVibes.MainPage"
+             Title="Vocal Vibez">
+
+    <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="60"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Label Grid.Row="0" Grid.ColumnSpan="2" HeightRequest="57" Text="Vocal Vibez" TextColor="Black" FontSize="24" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" BackgroundColor="#DAE4FF"/>
+            <StackLayout Grid.Row="0" Grid.Column="1" Margin="0,0,5,0" VerticalOptions="Center" HorizontalOptions="End">
+                <Picker x:Name="pickVoice" Title="Select Voice" BackgroundColor="White" SelectedIndexChanged="PickVoice_SelectedIndexChanged">
+                </Picker>
+            </StackLayout>
+            <Image Grid.ColumnSpan="2" AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0,0,1,1" Source="AWS_Amazon_Transcribe_1537508848.jpg" Grid.Row="1" Margin="0,-9,0,0" Aspect="AspectFill"/>
+            <ScrollView Grid.Row="1">
+                <Grid Grid.Row="1" ColumnSpacing="5" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="40"/>
+                        <ColumnDefinition Width="75"/>
+                        <ColumnDefinition Width="75"/>
+                        <ColumnDefinition Width="170"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+
+                    <Grid Grid.Column="0" RowSpacing="1" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="177"/>
+                            <RowDefinition Height="207"/>
+                            <RowDefinition Height="207"/>
+                            <RowDefinition Height="238"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="35"/>
+                            <ColumnDefinition Width="35"/>
+                            <ColumnDefinition Width="35"/>
+                            <ColumnDefinition Width="35"/>
+                        </Grid.ColumnDefinitions>
+                        <StackLayout HorizontalOptions="Start"  BackgroundColor="{Binding VBoxColor0}" WidthRequest="40" Margin="0,0,0,1" Orientation="Vertical" Grid.Row="0">
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="170"/>
+                                    <RowDefinition Height="5"/>
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="43"/>
+                                    <ColumnDefinition Width="43"/>
+                                </Grid.ColumnDefinitions>
+                                <Label BackgroundColor="Transparent" VerticalOptions="Start" HorizontalOptions="Center" Text="{Binding VLabel01}" FontSize="14" TextColor="Black" WidthRequest="35" HeightRequest="30" Margin="8,0,3,0">
+                                    <Label.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="OnClicked"/>
+                                    </Label.GestureRecognizers>
+                                </Label>
+                                <Label BackgroundColor="Transparent" VerticalOptions="End" HorizontalOptions="Center"  Text="{Binding VLabel02}" FontSize="14" TextColor="Black" WidthRequest="35" HeightRequest="30" Margin="8,0,3,0">
+                                    <Label.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="OnClicked"/>
+                                    </Label.GestureRecognizers>
+                                </Label>
+                            </Grid>
+                        </StackLayout>
+                        <StackLayout HorizontalOptions="Start" BackgroundColor="{Binding VBoxColor1}" Margin="0,0,0,1" Orientation="Vertical" Grid.Row="1" WidthRequest="40">
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="200"/>
+                                    <RowDefinition Height="5"/>
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="43"/>
+                                    <ColumnDefinition Width="43"/>
+                                </Grid.ColumnDefinitions>
+                                <Label BackgroundColor="Transparent" VerticalOptions="Start" HorizontalOptions="Center" Text="{Binding VLabel11}" FontSize="14" TextColor="Black" WidthRequest="35" HeightRequest="30" Margin="8,0,3,0">
+                                    <Label.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="OnClicked"/>
+                                    </Label.GestureRecognizers>
+                                </Label>
+                                <Label BackgroundColor="Transparent" VerticalOptions="End" HorizontalOptions="Center"  Text="{Binding VLabel12}" FontSize="14" TextColor="Black" WidthRequest="35" HeightRequest="30" Margin="8,0,3,0">
+                                    <Label.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="OnClicked"/>
+                                    </Label.GestureRecognizers>
+                                </Label>
+                            </Grid>
+                        </StackLayout>
+                        <StackLayout HorizontalOptions="Start" BackgroundColor="{Binding VBoxColor2}" Margin="0,0,0,1" Orientation="Vertical" Grid.Row="2" WidthRequest="40">
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="200"/>
+                                    <RowDefinition Height="5"/>
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="43"/>
+                                    <ColumnDefinition Width="43"/>
+                                </Grid.ColumnDefinitions>
+                                <Label BackgroundColor="Transparent" VerticalOptions="Start" HorizontalOptions="Center" Text="{Binding VLabel21}" FontSize="14" TextColor="Black" WidthRequest="35" HeightRequest="30" Margin="8,0,3,0">
+                                    <Label.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="OnClicked"/>
+                                    </Label.GestureRecognizers>
+                                </Label>
+                                <Label BackgroundColor="Transparent" VerticalOptions="End" HorizontalOptions="Center"  Text="{Binding VLabel22}" FontSize="14" TextColor="Black" WidthRequest="35" HeightRequest="30" Margin="8,0,3,0">
+                                    <Label.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="OnClicked"/>
+                                    </Label.GestureRecognizers>
+                                </Label>
+                            </Grid>
+                        </StackLayout>
+                        <StackLayout HorizontalOptions="Start" BackgroundColor="{Binding VBoxColor3}" Margin="0,0,0,1" Orientation="Vertical" Grid.Row="3" WidthRequest="40">
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="232"/>
+                                    <RowDefinition Height="5"/>
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="43"/>
+                                    <ColumnDefinition Width="43"/>
+                                </Grid.ColumnDefinitions>
+                                <Label BackgroundColor="Transparent" VerticalOptions="Start" HorizontalOptions="Center"  Text="{Binding VLabel31}" FontSize="14" TextColor="Black" WidthRequest="35" HeightRequest="30" Margin="8,0,3,0">
+                                    <Label.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="OnClicked"/>
+                                    </Label.GestureRecognizers>
+                                </Label>
+                                <Label BackgroundColor="Transparent" VerticalOptions="End" HorizontalOptions="Center"  Text="{Binding VLabel32}" FontSize="14" TextColor="Black" WidthRequest="35" HeightRequest="30" Margin="8,0,3,0">
+                                    <Label.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="OnClicked"/>
+                                    </Label.GestureRecognizers>
+                                </Label>
+                            </Grid>
+                        </StackLayout>
+                    </Grid>
+                    <!--for Long keys only-->
+                    <Grid Grid.Column="1" RowSpacing="1" Grid.ColumnSpan="2" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="25"/>
+                            <RowDefinition Height="25"/>
+                            <RowDefinition Height="25"/>
+                            <RowDefinition Height="25"/>
+                            <RowDefinition Height="25"/>
+                            <RowDefinition Height="25"/>
+                            <RowDefinition Height="25"/>
+                            <RowDefinition Height="25"/>
+                            <RowDefinition Height="25"/>
+                            <RowDefinition Height="25"/>
+                            <RowDefinition Height="25"/>
+                            <RowDefinition Height="25"/>
+                            <RowDefinition Height="25"/>
+                            <RowDefinition Height="25"/>
+                            <RowDefinition Height="25"/>
+                            <RowDefinition Height="25"/>
+                            <RowDefinition Height="25"/>
+                            <RowDefinition Height="25"/>
+                            <RowDefinition Height="25"/>
+                            <RowDefinition Height="25"/>
+                            <RowDefinition Height="25"/>
+                            <RowDefinition Height="25"/>
+                            <RowDefinition Height="25"/>
+                            <RowDefinition Height="25"/>
+                            <RowDefinition Height="25"/>
+                            <RowDefinition Height="25"/>
+                            <RowDefinition Height="25"/>
+                            <RowDefinition Height="25"/>
+                            <RowDefinition Height="25"/>
+                            <RowDefinition Height="25"/>
+                            <RowDefinition Height="25"/>
+                            <RowDefinition Height="25"/>
+                        </Grid.RowDefinitions>
+
+                        <StackLayout Grid.Row="0" Grid.ColumnSpan="2" BackgroundColor="#77839C">
+                            <Grid HeightRequest="25">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="75"/>
+                                    <ColumnDefinition Width="75"/>
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="25"/>
+                                    <RowDefinition Height="25"/>
+                                </Grid.RowDefinitions>
+                                <Label Grid.Column="1" BackgroundColor="Transparent" Text="{Binding HBox0}" FontSize="14" HorizontalTextAlignment="Center" TextColor="Black" WidthRequest="75" HeightRequest="25">
+                                    <Label.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="OnClicked"/>
+                                    </Label.GestureRecognizers>
+                                </Label>
+                                <!--<Button Grid.Column="1" BackgroundColor="Transparent" Text="{Binding HBox0}" FontSize="14" TextColor="Black" HeightRequest="25" Padding="1,0,1,1" Margin="0,0,0,0" Clicked="OnClicked"></Button>-->
+                            </Grid>
+                        </StackLayout>
+
+                        <StackLayout Grid.Row="1" Grid.ColumnSpan="2" BackgroundColor="#77839C">
+                            <Grid HeightRequest="25">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="75"/>
+                                    <ColumnDefinition Width="75"/>
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="25"/>
+                                    <RowDefinition Height="25"/>
+                                </Grid.RowDefinitions>
+                                <Label Grid.Column="1" BackgroundColor="Transparent" Text="{Binding HBox1}" FontSize="14" HorizontalTextAlignment="Center" TextColor="Black" WidthRequest="75" HeightRequest="25">
+                                    <Label.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="OnClicked"/>
+                                    </Label.GestureRecognizers>
+                                </Label>
+                            </Grid>
+                        </StackLayout>
+
+                        <StackLayout Grid.Row="2" Grid.ColumnSpan="2" BackgroundColor="#77839C">
+                            <Grid HeightRequest="25">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="75"/>
+                                    <ColumnDefinition Width="75"/>
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="25"/>
+                                    <RowDefinition Height="25"/>
+                                </Grid.RowDefinitions>
+                                <Label Grid.Column="1" BackgroundColor="Transparent" Text="{Binding HBox2}" FontSize="14" HorizontalTextAlignment="Center" TextColor="Black" WidthRequest="75" HeightRequest="25">
+                                    <Label.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="OnClicked"/>
+                                    </Label.GestureRecognizers>
+                                </Label>
+                                <!--<Button Grid.Column="1" BackgroundColor="Transparent" Text="{Binding HBox2}" FontSize="14" TextColor="Black" WidthRequest="75" HeightRequest="25" Padding="1,-1,1,0" Margin="0,0,2,0" Clicked="OnClicked"></Button>-->
+                            </Grid>
+                        </StackLayout>
+
+                        <StackLayout Grid.Row="3" Grid.ColumnSpan="2" BackgroundColor="#77839C">
+                            <Grid HeightRequest="25">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="75"/>
+                                    <ColumnDefinition Width="75"/>
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="25"/>
+                                    <RowDefinition Height="25"/>
+                                </Grid.RowDefinitions>
+                                <Label Grid.Column="1" BackgroundColor="Transparent" Text="{Binding HBox3}" FontSize="14" HorizontalTextAlignment="Center" TextColor="Black" WidthRequest="75" HeightRequest="25">
+                                    <Label.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="OnClicked"/>
+                                    </Label.GestureRecognizers>
+                                </Label>
+                                <!--<Button Grid.Column="1" BackgroundColor="Transparent" Text="{Binding HBox3}" FontSize="14" TextColor="Black" WidthRequest="75" HeightRequest="25" Padding="1,-1,1,0" Margin="0,0,2,0" Clicked="OnClicked"></Button>-->
+                            </Grid>
+                        </StackLayout>
+
+                        <StackLayout Grid.Row="4" Grid.ColumnSpan="2" BackgroundColor="#77839C">
+                            <Grid HeightRequest="25">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="75"/>
+                                    <ColumnDefinition Width="75"/>
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="25"/>
+                                    <RowDefinition Height="25"/>
+                                </Grid.RowDefinitions>
+                                <Label Grid.Column="1" BackgroundColor="Transparent" Text="{Binding HBox4}" FontSize="14" HorizontalTextAlignment="Center" TextColor="Black" WidthRequest="75" HeightRequest="25">
+                                    <Label.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="OnClicked"/>
+                                    </Label.GestureRecognizers>
+                                </Label>
+                                <!--<Button Grid.Column="1" BackgroundColor="Transparent" Text="{Binding HBox4}" FontSize="14" TextColor="Black" WidthRequest="75" HeightRequest="25" Padding="1,-1,1,0" Margin="0,0,2,0" Clicked="OnClicked"></Button>-->
+                            </Grid>
+                        </StackLayout>
+
+                        <StackLayout Grid.Row="5" Grid.ColumnSpan="2" BackgroundColor="#77839C">
+                            <Grid HeightRequest="25">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="75"/>
+                                    <ColumnDefinition Width="75"/>
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="25"/>
+                                    <RowDefinition Height="25"/>
+                                </Grid.RowDefinitions>
+                                <Label Grid.Column="1" BackgroundColor="Transparent" Text="{Binding HBox5}" FontSize="14" HorizontalTextAlignment="Center" TextColor="Black" WidthRequest="75" HeightRequest="25">
+                                    <Label.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="OnClicked"/>
+                                    </Label.GestureRecognizers>
+                                </Label>
+                                <!--<Button Grid.Column="1" BackgroundColor="Transparent" Text="{Binding HBox5}" FontSize="14" TextColor="Black" WidthRequest="75" HeightRequest="25" Padding="1,-1,1,0" Margin="0,0,2,0" Clicked="OnClicked"></Button>-->
+                            </Grid>
+                        </StackLayout>
+
+                        <StackLayout Grid.Row="6" Grid.ColumnSpan="2" BackgroundColor="#77839C">
+                            <Grid HeightRequest="25">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="75"/>
+                                    <ColumnDefinition Width="75"/>
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="25"/>
+                                    <RowDefinition Height="25"/>
+                                </Grid.RowDefinitions>
+                                <Label Grid.Column="1" BackgroundColor="Transparent" Text="{Binding HBox6}" FontSize="14" HorizontalTextAlignment="Center" TextColor="Black" WidthRequest="75" HeightRequest="25">
+                                    <Label.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="OnClicked"/>
+                                    </Label.GestureRecognizers>
+                                </Label>
+                                <!--<Button Grid.Column="1" BackgroundColor="Transparent" Text="{Binding HBox6}" FontSize="14" TextColor="Black" WidthRequest="75" HeightRequest="25" Padding="1,-1,1,0" Margin="0,0,2,0" Clicked="OnClicked"></Button>-->
+                            </Grid>
+                        </StackLayout>
+
+                        <StackLayout Grid.Row="7" Grid.ColumnSpan="2" BackgroundColor="#77839C">
+                            <Grid HeightRequest="25">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="75"/>
+                                    <ColumnDefinition Width="75"/>
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="25"/>
+                                    <RowDefinition Height="25"/>
+                                </Grid.RowDefinitions>
+                                <Label Grid.Column="1" BackgroundColor="Transparent" Text="{Binding HBox7}" FontSize="14" HorizontalTextAlignment="Center" TextColor="Black" WidthRequest="75" HeightRequest="25">
+                                    <Label.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="OnClicked"/>
+                                    </Label.GestureRecognizers>
+                                </Label>
+                                <!--<Button Grid.Column="1" BackgroundColor="Transparent" Text="{Binding HBox7}" FontSize="14" TextColor="Black" WidthRequest="75" HeightRequest="25" Padding="1,-1,1,0" Margin="0,0,2,0" Clicked="OnClicked"></Button>-->
+                            </Grid>
+                        </StackLayout>
+
+                        <StackLayout Grid.Row="8" Grid.ColumnSpan="2" BackgroundColor="#77839C">
+                            <Grid HeightRequest="25">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="75"/>
+                                    <ColumnDefinition Width="75"/>
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="25"/>
+                                    <RowDefinition Height="25"/>
+                                </Grid.RowDefinitions>
+                                <Label Grid.Column="1" BackgroundColor="Transparent" Text="{Binding HBox8}" FontSize="14" HorizontalTextAlignment="Center" TextColor="Black" WidthRequest="75" HeightRequest="25">
+                                    <Label.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="OnClicked"/>
+                                    </Label.GestureRecognizers>
+                                </Label>
+                                <!--<Button Grid.Column="1" BackgroundColor="Transparent" Text="{Binding HBox8}" FontSize="14" TextColor="Black" WidthRequest="75" HeightRequest="25" Padding="1,-1,1,0" Margin="0,0,2,0" Clicked="OnClicked"></Button>-->
+                            </Grid>
+                        </StackLayout>
+
+                        <StackLayout Grid.Row="9" Grid.ColumnSpan="2" BackgroundColor="#77839C">
+                            <Grid HeightRequest="25">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="75"/>
+                                    <ColumnDefinition Width="75"/>
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="25"/>
+                                    <RowDefinition Height="25"/>
+                                </Grid.RowDefinitions>
+                                <Label Grid.Column="1" BackgroundColor="Transparent" Text="{Binding HBox9}" FontSize="14" HorizontalTextAlignment="Center" TextColor="Black" WidthRequest="75" HeightRequest="25">
+                                    <Label.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="OnClicked"/>
+                                    </Label.GestureRecognizers>
+                                </Label>
+                                <!--<Button Grid.Column="1" BackgroundColor="Transparent" Text="{Binding HBox9}" FontSize="14" TextColor="Black" WidthRequest="75" HeightRequest="25" Padding="1,-1,1,0" Margin="0,0,2,0" Clicked="OnClicked"></Button>-->
+                            </Grid>
+                        </StackLayout>
+
+                        <StackLayout Grid.Row="10" Grid.ColumnSpan="2" BackgroundColor="#77839C">
+                            <Grid HeightRequest="25">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="75"/>
+                                    <ColumnDefinition Width="75"/>
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="25"/>
+                                    <RowDefinition Height="25"/>
+                                </Grid.RowDefinitions>
+                                <Label Grid.Column="1" BackgroundColor="Transparent" Text="{Binding HBox10}" FontSize="14" HorizontalTextAlignment="Center" TextColor="Black" WidthRequest="75" HeightRequest="25">
+                                    <Label.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="OnClicked"/>
+                                    </Label.GestureRecognizers>
+                                </Label>
+                                <!--<Button Grid.Column="1" BackgroundColor="Transparent" Text="{Binding HBox10}" FontSize="14" TextColor="Black" WidthRequest="75" HeightRequest="25" Padding="1,-1,1,0" Margin="0,0,2,0" Clicked="OnClicked"></Button>-->
+                            </Grid>
+                        </StackLayout>
+
+                        <StackLayout Grid.Row="11" Grid.ColumnSpan="2" BackgroundColor="#77839C">
+                            <Grid HeightRequest="25">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="75"/>
+                                    <ColumnDefinition Width="75"/>
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="25"/>
+                                    <RowDefinition Height="25"/>
+                                </Grid.RowDefinitions>
+                                <Label Grid.Column="1" BackgroundColor="Transparent" Text="{Binding HBox11}" FontSize="14" HorizontalTextAlignment="Center" TextColor="Black" WidthRequest="75" HeightRequest="25">
+                                    <Label.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="OnClicked"/>
+                                    </Label.GestureRecognizers>
+                                </Label>
+                                <!--<Button Grid.Column="1" BackgroundColor="Transparent" Text="{Binding HBox11}" FontSize="14" TextColor="Black" WidthRequest="75" HeightRequest="25" Padding="1,-1,1,0" Margin="0,0,2,0" Clicked="OnClicked"></Button>-->
+                            </Grid>
+                        </StackLayout>
+
+                        <StackLayout Grid.Row="12" Grid.ColumnSpan="2" BackgroundColor="#77839C">
+                            <Grid HeightRequest="25">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="75"/>
+                                    <ColumnDefinition Width="75"/>
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="25"/>
+                                    <RowDefinition Height="25"/>
+                                </Grid.RowDefinitions>
+                                <Label Grid.Column="1" BackgroundColor="Transparent" Text="{Binding HBox12}" FontSize="14" HorizontalTextAlignment="Center" TextColor="Black" WidthRequest="75" HeightRequest="25">
+                                    <Label.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="OnClicked"/>
+                                    </Label.GestureRecognizers>
+                                </Label>
+                                <!--<Button Grid.Column="1" BackgroundColor="Transparent" Text="{Binding HBox12}" FontSize="14" TextColor="Black" WidthRequest="75" HeightRequest="25" Padding="1,-1,1,0" Margin="0,0,2,0" Clicked="OnClicked"></Button>-->
+                            </Grid>
+                        </StackLayout>
+
+                        <StackLayout Grid.Row="13" Grid.ColumnSpan="2" BackgroundColor="#77839C">
+                            <Grid HeightRequest="25">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="75"/>
+                                    <ColumnDefinition Width="75"/>
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="25"/>
+                                    <RowDefinition Height="25"/>
+                                </Grid.RowDefinitions>
+                                <Label Grid.Column="1" BackgroundColor="Transparent" Text="{Binding HBox13}" FontSize="14" HorizontalTextAlignment="Center" TextColor="Black" WidthRequest="75" HeightRequest="25">
+                                    <Label.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="OnClicked"/>
+                                    </Label.GestureRecognizers>
+                                </Label>
+                                <!--<Button Grid.Column="1" BackgroundColor="Transparent" Text="{Binding HBox13}" FontSize="14" TextColor="Black" WidthRequest="75" HeightRequest="25" Padding="1,-1,1,0" Margin="0,0,2,0" Clicked="OnClicked"></Button>-->
+                            </Grid>
+                        </StackLayout>
+
+                        <StackLayout Grid.Row="14" Grid.ColumnSpan="2" BackgroundColor="#77839C">
+                            <Grid HeightRequest="25">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="75"/>
+                                    <ColumnDefinition Width="75"/>
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="25"/>
+                                    <RowDefinition Height="25"/>
+                                </Grid.RowDefinitions>
+                                <Label Grid.Column="1" BackgroundColor="Transparent" Text="{Binding HBox14}" FontSize="14" HorizontalTextAlignment="Center" TextColor="Black" WidthRequest="75" HeightRequest="25">
+                                    <Label.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="OnClicked"/>
+                                    </Label.GestureRecognizers>
+                                </Label>
+                                <!--<Button Grid.Column="1" BackgroundColor="Transparent" Text="{Binding HBox14}" FontSize="14" TextColor="Black" WidthRequest="75" HeightRequest="25" Padding="1,-1,1,0" Margin="0,0,2,0" Clicked="OnClicked"></Button>-->
+                            </Grid>
+                        </StackLayout>
+
+                        <StackLayout Grid.Row="15" Grid.ColumnSpan="2" BackgroundColor="#77839C">
+                            <Grid HeightRequest="25">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="75"/>
+                                    <ColumnDefinition Width="75"/>
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="25"/>
+                                    <RowDefinition Height="25"/>
+                                </Grid.RowDefinitions>
+                                <Label Grid.Column="1" BackgroundColor="Transparent" Text="{Binding HBox15}" FontSize="14" HorizontalTextAlignment="Center" TextColor="Black" WidthRequest="75" HeightRequest="25">
+                                    <Label.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="OnClicked"/>
+                                    </Label.GestureRecognizers>
+                                </Label>
+                                <!--<Button Grid.Column="1" BackgroundColor="Transparent" Text="{Binding HBox15}" FontSize="14" TextColor="Black" WidthRequest="75" HeightRequest="25" Padding="1,-1,1,0" Margin="0,0,2,0" Clicked="OnClicked"></Button>-->
+                            </Grid>
+                        </StackLayout>
+
+                        <StackLayout Grid.Row="16" Grid.ColumnSpan="2" BackgroundColor="#77839C">
+                            <Grid HeightRequest="25">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="75"/>
+                                    <ColumnDefinition Width="75"/>
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="25"/>
+                                    <RowDefinition Height="25"/>
+                                </Grid.RowDefinitions>
+                                <Label Grid.Column="1" BackgroundColor="Transparent" Text="{Binding HBox16}" FontSize="14" HorizontalTextAlignment="Center" TextColor="Black" WidthRequest="75" HeightRequest="25">
+                                    <Label.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="OnClicked"/>
+                                    </Label.GestureRecognizers>
+                                </Label>
+                                <!--<Button Grid.Column="1" BackgroundColor="Transparent" Text="{Binding HBox16}" FontSize="14" TextColor="Black" WidthRequest="75" HeightRequest="25" Padding="1,-1,1,0" Margin="0,0,2,0" Clicked="OnClicked"></Button>-->
+                            </Grid>
+                        </StackLayout>
+
+                        <StackLayout Grid.Row="17" Grid.ColumnSpan="2" BackgroundColor="#77839C">
+                            <Grid HeightRequest="25">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="75"/>
+                                    <ColumnDefinition Width="75"/>
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="25"/>
+                                    <RowDefinition Height="25"/>
+                                </Grid.RowDefinitions>
+                                <Label Grid.Column="1" BackgroundColor="Transparent" Text="{Binding HBox17}" FontSize="14" HorizontalTextAlignment="Center" TextColor="Black" WidthRequest="75" HeightRequest="25">
+                                    <Label.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="OnClicked"/>
+                                    </Label.GestureRecognizers>
+                                </Label>
+                                <!--<Button Grid.Column="1" BackgroundColor="Transparent" Text="{Binding HBox17}" FontSize="14" TextColor="Black" WidthRequest="75" HeightRequest="25" Padding="1,-1,1,0" Margin="0,0,2,0" Clicked="OnClicked"></Button>-->
+                            </Grid>
+                        </StackLayout>
+
+                        <StackLayout Grid.Row="18" Grid.ColumnSpan="2" BackgroundColor="#77839C">
+                            <Grid HeightRequest="25">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="75"/>
+                                    <ColumnDefinition Width="75"/>
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="25"/>
+                                    <RowDefinition Height="25"/>
+                                </Grid.RowDefinitions>
+                                <Label Grid.Column="1" BackgroundColor="Transparent" Text="{Binding HBox18}" FontSize="14" HorizontalTextAlignment="Center" TextColor="Black" WidthRequest="75" HeightRequest="25">
+                                    <Label.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="OnClicked"/>
+                                    </Label.GestureRecognizers>
+                                </Label>
+                                <!--<Button Grid.Column="1" BackgroundColor="Transparent" Text="{Binding HBox18}" FontSize="14" TextColor="Black" WidthRequest="75" HeightRequest="25" Padding="1,-1,1,0" Margin="0,0,2,0" Clicked="OnClicked"></Button>-->
+                            </Grid>
+                        </StackLayout>
+
+                        <StackLayout Grid.Row="19" Grid.ColumnSpan="2" BackgroundColor="#77839C">
+                            <Grid HeightRequest="25">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="75"/>
+                                    <ColumnDefinition Width="75"/>
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="25"/>
+                                    <RowDefinition Height="25"/>
+                                </Grid.RowDefinitions>
+                                <Label Grid.Column="1" BackgroundColor="Transparent" Text="{Binding HBox19}" FontSize="14" HorizontalTextAlignment="Center" TextColor="Black" WidthRequest="75" HeightRequest="25">
+                                    <Label.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="OnClicked"/>
+                                    </Label.GestureRecognizers>
+                                </Label>
+                                <!--<Button Grid.Column="1" BackgroundColor="Transparent" Text="{Binding HBox19}" FontSize="14" TextColor="Black" WidthRequest="75" HeightRequest="25" Padding="1,-1,1,0" Margin="0,0,2,0" Clicked="OnClicked"></Button>-->
+                            </Grid>
+                        </StackLayout>
+
+                        <StackLayout Grid.Row="20" Grid.ColumnSpan="2" BackgroundColor="#77839C">
+                            <Grid HeightRequest="25">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="75"/>
+                                    <ColumnDefinition Width="75"/>
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="25"/>
+                                    <RowDefinition Height="25"/>
+                                </Grid.RowDefinitions>
+                                <Label Grid.Column="1" BackgroundColor="Transparent" Text="{Binding HBox20}" FontSize="14" HorizontalTextAlignment="Center" TextColor="Black" WidthRequest="75" HeightRequest="25">
+                                    <Label.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="OnClicked"/>
+                                    </Label.GestureRecognizers>
+                                </Label>
+                                <!--<Button Grid.Column="1" BackgroundColor="Transparent" Text="{Binding HBox20}" FontSize="14" TextColor="Black" WidthRequest="75" HeightRequest="25" Padding="1,-1,1,0" Margin="0,0,2,0" Clicked="OnClicked"></Button>-->
+                            </Grid>
+                        </StackLayout>
+
+                        <StackLayout Grid.Row="21" Grid.ColumnSpan="2" BackgroundColor="#77839C">
+                            <Grid HeightRequest="25">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="75"/>
+                                    <ColumnDefinition Width="75"/>
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="25"/>
+                                    <RowDefinition Height="25"/>
+                                </Grid.RowDefinitions>
+                                <Label Grid.Column="1" BackgroundColor="Transparent" Text="{Binding HBox21}" FontSize="14" HorizontalTextAlignment="Center" TextColor="Black" WidthRequest="75" HeightRequest="25">
+                                    <Label.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="OnClicked"/>
+                                    </Label.GestureRecognizers>
+                                </Label>
+                                <!--<Button Grid.Column="1" BackgroundColor="Transparent" Text="{Binding HBox21}" FontSize="14" TextColor="Black" WidthRequest="75" HeightRequest="25" Padding="1,-1,1,0" Margin="0,0,2,0" Clicked="OnClicked"></Button>-->
+                            </Grid>
+                        </StackLayout>
+
+                        <StackLayout Grid.Row="22" Grid.ColumnSpan="2" BackgroundColor="#77839C">
+                            <Grid HeightRequest="25">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="75"/>
+                                    <ColumnDefinition Width="75"/>
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="25"/>
+                                    <RowDefinition Height="25"/>
+                                </Grid.RowDefinitions>
+                                <Label Grid.Column="1" BackgroundColor="Transparent" Text="{Binding HBox22}" FontSize="14" HorizontalTextAlignment="Center" TextColor="Black" WidthRequest="75" HeightRequest="25">
+                                    <Label.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="OnClicked"/>
+                                    </Label.GestureRecognizers>
+                                </Label>
+                                <!--<Button Grid.Column="1" BackgroundColor="Transparent" Text="{Binding HBox22}" FontSize="14" TextColor="Black" WidthRequest="75" HeightRequest="25" Padding="1,-1,1,0" Margin="0,0,2,0" Clicked="OnClicked"></Button>-->
+                            </Grid>
+                        </StackLayout>
+
+                        <StackLayout Grid.Row="23" Grid.ColumnSpan="2" BackgroundColor="#77839C">
+                            <Grid HeightRequest="25">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="75"/>
+                                    <ColumnDefinition Width="75"/>
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="25"/>
+                                    <RowDefinition Height="25"/>
+                                </Grid.RowDefinitions>
+                                <Label Grid.Column="1" BackgroundColor="Transparent" Text="{Binding HBox23}" FontSize="14" HorizontalTextAlignment="Center" TextColor="Black" WidthRequest="75" HeightRequest="25">
+                                    <Label.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="OnClicked"/>
+                                    </Label.GestureRecognizers>
+                                </Label>
+                                <!--<Button Grid.Column="1" BackgroundColor="Transparent" Text="{Binding HBox23}" FontSize="14" TextColor="Black" WidthRequest="75" HeightRequest="25" Padding="1,-1,1,0" Margin="0,0,2,0" Clicked="OnClicked"></Button>-->
+                            </Grid>
+                        </StackLayout>
+
+                        <StackLayout Grid.Row="24" Grid.ColumnSpan="2" BackgroundColor="#77839C">
+                            <Grid HeightRequest="25">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="75"/>
+                                    <ColumnDefinition Width="75"/>
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="25"/>
+                                    <RowDefinition Height="25"/>
+                                </Grid.RowDefinitions>
+                                <Label Grid.Column="1" BackgroundColor="Transparent" Text="{Binding HBox24}" FontSize="14" HorizontalTextAlignment="Center" TextColor="Black" WidthRequest="75" HeightRequest="25">
+                                    <Label.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="OnClicked"/>
+                                    </Label.GestureRecognizers>
+                                </Label>
+                                <!--<Button Grid.Column="1" BackgroundColor="Transparent" Text="{Binding HBox24}" FontSize="14" TextColor="Black" WidthRequest="75" HeightRequest="25" Padding="1,-1,1,0" Margin="0,0,2,0" Clicked="OnClicked"></Button>-->
+                            </Grid>
+                        </StackLayout>
+
+                        <StackLayout Grid.Row="25" Grid.ColumnSpan="2" BackgroundColor="#77839C">
+                            <Grid HeightRequest="25">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="75"/>
+                                    <ColumnDefinition Width="75"/>
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="25"/>
+                                    <RowDefinition Height="25"/>
+                                </Grid.RowDefinitions>
+                                <Label Grid.Column="1" BackgroundColor="Transparent" Text="{Binding HBox25}" FontSize="14" HorizontalTextAlignment="Center" TextColor="Black" WidthRequest="75" HeightRequest="25">
+                                    <Label.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="OnClicked"/>
+                                    </Label.GestureRecognizers>
+                                </Label>
+                                <!--<Button Grid.Column="1" BackgroundColor="Transparent" Text="{Binding HBox25}" FontSize="14" TextColor="Black" WidthRequest="75" HeightRequest="25" Padding="1,-1,1,0" Margin="0,0,2,0" Clicked="OnClicked"></Button>-->
+                            </Grid>
+                        </StackLayout>
+
+                        <StackLayout Grid.Row="26" Grid.ColumnSpan="2" BackgroundColor="#77839C">
+                            <Grid HeightRequest="25">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="75"/>
+                                    <ColumnDefinition Width="75"/>
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="25"/>
+                                    <RowDefinition Height="25"/>
+                                </Grid.RowDefinitions>
+                                <Label Grid.Column="1" BackgroundColor="Transparent" Text="{Binding HBox26}" FontSize="14" HorizontalTextAlignment="Center" TextColor="Black" WidthRequest="75" HeightRequest="25">
+                                    <Label.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="OnClicked"/>
+                                    </Label.GestureRecognizers>
+                                </Label>
+                                <!--<Button Grid.Column="1" BackgroundColor="Transparent" Text="{Binding HBox26}" FontSize="14" TextColor="Black" WidthRequest="75" HeightRequest="25" Padding="1,-1,1,0" Margin="0,0,2,0" Clicked="OnClicked"></Button>-->
+                            </Grid>
+                        </StackLayout>
+
+                        <StackLayout Grid.Row="27" Grid.ColumnSpan="2" BackgroundColor="#77839C">
+                            <Grid HeightRequest="25">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="75"/>
+                                    <ColumnDefinition Width="75"/>
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="25"/>
+                                    <RowDefinition Height="25"/>
+                                </Grid.RowDefinitions>
+                                <Label Grid.Column="1" BackgroundColor="Transparent" Text="{Binding HBox27}" FontSize="14" HorizontalTextAlignment="Center" TextColor="Black" WidthRequest="75" HeightRequest="25">
+                                    <Label.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="OnClicked"/>
+                                    </Label.GestureRecognizers>
+                                </Label>
+                                <!--<Button Grid.Column="1" BackgroundColor="Transparent" Text="{Binding HBox27}" FontSize="14" TextColor="Black" WidthRequest="75" HeightRequest="25" Padding="1,-1,1,0" Margin="0,0,2,0" Clicked="OnClicked"></Button>-->
+                            </Grid>
+                        </StackLayout>
+
+                        <StackLayout Grid.Row="28" Grid.ColumnSpan="2" BackgroundColor="#77839C">
+                            <Grid HeightRequest="25">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="75"/>
+                                    <ColumnDefinition Width="75"/>
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="25"/>
+                                    <RowDefinition Height="25"/>
+                                </Grid.RowDefinitions>
+                                <Label Grid.Column="1" BackgroundColor="Transparent" Text="{Binding HBox28}" FontSize="14" HorizontalTextAlignment="Center" TextColor="Black" WidthRequest="75" HeightRequest="25">
+                                    <Label.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="OnClicked"/>
+                                    </Label.GestureRecognizers>
+                                </Label>
+                                <!--<Button Grid.Column="1" BackgroundColor="Transparent" Text="{Binding HBox28}" FontSize="14" TextColor="Black" WidthRequest="75" HeightRequest="25" Padding="1,-1,1,0" Margin="0,0,2,0" Clicked="OnClicked"></Button>-->
+                            </Grid>
+                        </StackLayout>
+
+                        <StackLayout Grid.Row="29" Grid.ColumnSpan="2" BackgroundColor="#77839C">
+                            <Grid HeightRequest="25">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="75"/>
+                                    <ColumnDefinition Width="75"/>
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="25"/>
+                                    <RowDefinition Height="25"/>
+                                </Grid.RowDefinitions>
+                                <Label Grid.Column="1" BackgroundColor="Transparent" Text="{Binding HBox29}" FontSize="14" HorizontalTextAlignment="Center" TextColor="Black" WidthRequest="75" HeightRequest="25">
+                                    <Label.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="OnClicked"/>
+                                    </Label.GestureRecognizers>
+                                </Label>
+                                <!--<Button Grid.Column="1" BackgroundColor="Transparent" Text="{Binding HBox29}" FontSize="14" TextColor="Black" WidthRequest="75" HeightRequest="25" Padding="1,-1,1,0" Margin="0,0,2,0" Clicked="OnClicked"></Button>-->
+                            </Grid>
+                        </StackLayout>
+
+                        <StackLayout Grid.Row="30" Grid.ColumnSpan="2" BackgroundColor="#77839C">
+                            <Grid HeightRequest="25">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="75"/>
+                                    <ColumnDefinition Width="75"/>
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="25"/>
+                                    <RowDefinition Height="25"/>
+                                </Grid.RowDefinitions>
+                                <Label Grid.Column="1" BackgroundColor="Transparent" Text="{Binding HBox30}" FontSize="14" HorizontalTextAlignment="Center" TextColor="Black" WidthRequest="75" HeightRequest="25">
+                                    <Label.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="OnClicked"/>
+                                    </Label.GestureRecognizers>
+                                </Label>
+                                <!--<Button Grid.Column="1" BackgroundColor="Transparent" Text="{Binding HBox30}" FontSize="14" TextColor="Black" WidthRequest="75" HeightRequest="25" Padding="1,-1,1,0" Margin="0,0,2,0" Clicked="OnClicked"></Button>-->
+                            </Grid>
+                        </StackLayout>
+
+                        <StackLayout Grid.Row="31" Grid.ColumnSpan="2" BackgroundColor="#77839C">
+                            <Grid HeightRequest="25">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="75"/>
+                                    <ColumnDefinition Width="75"/>
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="25"/>
+                                    <RowDefinition Height="25"/>
+                                </Grid.RowDefinitions>
+                                <Label Grid.Column="1" BackgroundColor="Transparent" Text="{Binding HBox31}" FontSize="14" HorizontalTextAlignment="Center" TextColor="Black" WidthRequest="75" HeightRequest="25">
+                                    <Label.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="OnClicked"/>
+                                    </Label.GestureRecognizers>
+                                </Label>
+                                <!--<Button Grid.Column="1" BackgroundColor="Transparent" Text="{Binding HBox31}" FontSize="14" TextColor="Black" WidthRequest="75" HeightRequest="25" Padding="1,-1,1,0" Margin="0,0,2,0" Clicked="OnClicked"></Button>-->
+                            </Grid>
+                        </StackLayout>
+                    </Grid>
+                    <!--for Short Keys-->
+                    <Grid Grid.Column="1" RowSpacing="1" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Margin="0,12.5,0,0">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="25"/>
+                            <RowDefinition Height="25"/>
+                            <RowDefinition Height="25"/>
+                            <RowDefinition Height="25"/>
+                            <RowDefinition Height="25"/>
+                            <RowDefinition Height="25"/>
+                            <RowDefinition Height="25"/>
+                            <RowDefinition Height="25"/>
+                            <RowDefinition Height="25"/>
+                            <RowDefinition Height="25"/>
+                            <RowDefinition Height="25"/>
+                            <RowDefinition Height="25"/>
+                            <RowDefinition Height="25"/>
+                            <RowDefinition Height="25"/>
+                            <RowDefinition Height="25"/>
+                            <RowDefinition Height="25"/>
+                            <RowDefinition Height="25"/>
+                            <RowDefinition Height="25"/>
+                            <RowDefinition Height="25"/>
+                            <RowDefinition Height="25"/>
+                            <RowDefinition Height="25"/>
+                            <RowDefinition Height="25"/>
+                            <RowDefinition Height="25"/>
+                            <RowDefinition Height="25"/>
+                            <RowDefinition Height="25"/>
+                            <RowDefinition Height="25"/>
+                            <RowDefinition Height="25"/>
+                            <RowDefinition Height="25"/>
+                            <RowDefinition Height="25"/>
+                            <RowDefinition Height="25"/>
+                            <RowDefinition Height="25"/>
+                        </Grid.RowDefinitions>
+
+                        <StackLayout Grid.Row="1" BackgroundColor="#ACB4C7">
+                            <Grid HeightRequest="25">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="40"/>
+                                    <ColumnDefinition Width="40"/>
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="25"/>
+                                    <RowDefinition Height="25"/>
+                                </Grid.RowDefinitions>
+                                <Label Grid.Column="0" Grid.Row="0" BackgroundColor="Transparent" Text="{Binding shortKey11}" FontSize="14" TextColor="Black" WidthRequest="45" HeightRequest="25" Margin="2,2,2,2">
+                                    <Label.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="OnClicked"/>
+                                    </Label.GestureRecognizers>
+                                </Label>
+                                <Label Grid.Column="1" BackgroundColor="Transparent" Text="{Binding shortKey12}" FontSize="14" TextColor="Black" WidthRequest="45" HeightRequest="25" Margin="2,2,2,2">
+                                    <Label.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="OnClicked"/>
+                                    </Label.GestureRecognizers>
+                                </Label>
+                            </Grid>
+                        </StackLayout>
+
+                        <StackLayout Grid.Row="2" BackgroundColor="#ACB4C7">
+                            <Grid HeightRequest="25">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="40"/>
+                                    <ColumnDefinition Width="40"/>
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="25"/>
+                                    <RowDefinition Height="25"/>
+                                </Grid.RowDefinitions>
+                                <Label Grid.Column="0" Grid.Row="0" BackgroundColor="Transparent" Text="{Binding shortKey21}" FontSize="14" TextColor="Black" WidthRequest="45" HeightRequest="25" Margin="2,2,2,2">
+                                    <Label.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="OnClicked"/>
+                                    </Label.GestureRecognizers>
+                                </Label>
+                                <Label Grid.Column="1" BackgroundColor="Transparent" Text="{Binding shortKey22}" FontSize="14" TextColor="Black" WidthRequest="45" HeightRequest="25" Margin="2,2,2,2">
+                                    <Label.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="OnClicked"/>
+                                    </Label.GestureRecognizers>
+                                </Label>
+                            </Grid>
+                        </StackLayout>
+
+                        <StackLayout Grid.Row="4" BackgroundColor="#ACB4C7" WidthRequest="10" HeightRequest="20">
+                            <Grid HeightRequest="25">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="40"/>
+                                    <ColumnDefinition Width="40"/>
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="25"/>
+                                    <RowDefinition Height="25"/>
+                                </Grid.RowDefinitions>
+                                <Label Grid.Column="0" Grid.Row="0" BackgroundColor="Transparent" Text="{Binding shortKey41}" FontSize="14" TextColor="Black" WidthRequest="45" HeightRequest="25" Margin="2,2,2,2">
+                                    <Label.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="OnClicked"/>
+                                    </Label.GestureRecognizers>
+                                </Label>
+                                <Label Grid.Column="1" BackgroundColor="Transparent" Text="{Binding shortKey42}" FontSize="14" TextColor="Black" WidthRequest="45" HeightRequest="25" Margin="2,2,2,2">
+                                    <Label.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="OnClicked"/>
+                                    </Label.GestureRecognizers>
+                                </Label>
+                            </Grid>
+                        </StackLayout>
+
+                        <StackLayout Grid.Row="5" BackgroundColor="#ACB4C7" WidthRequest="10" HeightRequest="20">
+                            <Grid HeightRequest="25">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="40"/>
+                                    <ColumnDefinition Width="40"/>
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="25"/>
+                                    <RowDefinition Height="25"/>
+                                </Grid.RowDefinitions>
+                                <Label Grid.Column="0" Grid.Row="0" BackgroundColor="Transparent" Text="{Binding shortKey51}" FontSize="14" TextColor="Black" WidthRequest="45" HeightRequest="25" Margin="2,2,2,2">
+                                    <Label.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="OnClicked"/>
+                                    </Label.GestureRecognizers>
+                                </Label>
+                                <Label Grid.Column="1" BackgroundColor="Transparent" Text="{Binding shortKey52}" FontSize="14" TextColor="Black" WidthRequest="45" HeightRequest="25" Margin="2,2,2,2">
+                                    <Label.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="OnClicked"/>
+                                    </Label.GestureRecognizers>
+                                </Label>
+                            </Grid>
+                        </StackLayout>
+
+                        <StackLayout Grid.Row="6" BackgroundColor="#ACB4C7" WidthRequest="10" HeightRequest="20">
+                            <Grid HeightRequest="25">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="40"/>
+                                    <ColumnDefinition Width="40"/>
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="25"/>
+                                    <RowDefinition Height="25"/>
+                                </Grid.RowDefinitions>
+                                <Label Grid.Column="0" Grid.Row="0" BackgroundColor="Transparent" Text="{Binding shortKey61}" FontSize="14" TextColor="Black" WidthRequest="45" HeightRequest="25" Margin="2,2,2,2">
+                                    <Label.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="OnClicked"/>
+                                    </Label.GestureRecognizers>
+                                </Label>
+                                <Label Grid.Column="1" BackgroundColor="Transparent" Text="{Binding shortKey62}" FontSize="14" TextColor="Black" WidthRequest="45" HeightRequest="25" Margin="2,2,2,2">
+                                    <Label.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="OnClicked"/>
+                                    </Label.GestureRecognizers>
+                                </Label>
+                            </Grid>
+                        </StackLayout>
+
+                        <StackLayout Grid.Row="8" BackgroundColor="#ACB4C7" WidthRequest="10" HeightRequest="20">
+                            <Grid HeightRequest="25">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="40"/>
+                                    <ColumnDefinition Width="40"/>
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="25"/>
+                                    <RowDefinition Height="25"/>
+                                </Grid.RowDefinitions>
+                                <Label Grid.Column="0" Grid.Row="0" BackgroundColor="Transparent" Text="{Binding shortKey81}" FontSize="14" TextColor="Black" WidthRequest="45" HeightRequest="25" Margin="2,2,2,2">
+                                    <Label.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="OnClicked"/>
+                                    </Label.GestureRecognizers>
+                                </Label>
+                                <Label Grid.Column="1" BackgroundColor="Transparent" Text="{Binding shortKey82}" FontSize="14" TextColor="Black" WidthRequest="45" HeightRequest="25" Margin="2,2,2,2">
+                                    <Label.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="OnClicked"/>
+                                    </Label.GestureRecognizers>
+                                </Label>
+                            </Grid>
+                        </StackLayout>
+
+                        <StackLayout Grid.Row="9" BackgroundColor="#ACB4C7" WidthRequest="10" HeightRequest="20">
+                            <Grid HeightRequest="25">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="40"/>
+                                    <ColumnDefinition Width="40"/>
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="25"/>
+                                    <RowDefinition Height="25"/>
+                                </Grid.RowDefinitions>
+                                <Label Grid.Column="0" Grid.Row="0" BackgroundColor="Transparent" Text="{Binding shortKey91}" FontSize="14" TextColor="Black" WidthRequest="45" HeightRequest="25" Margin="2,2,2,2">
+                                    <Label.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="OnClicked"/>
+                                    </Label.GestureRecognizers>
+                                </Label>
+                                <Label Grid.Column="1" BackgroundColor="Transparent" Text="{Binding shortKey92}" FontSize="14" TextColor="Black" WidthRequest="45" HeightRequest="25" Margin="2,2,2,2">
+                                    <Label.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="OnClicked"/>
+                                    </Label.GestureRecognizers>
+                                </Label>
+                            </Grid>
+                        </StackLayout>
+
+                        <StackLayout Grid.Row="11" BackgroundColor="#ACB4C7" WidthRequest="10" HeightRequest="20">
+                            <Grid HeightRequest="25">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="40"/>
+                                    <ColumnDefinition Width="40"/>
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="25"/>
+                                    <RowDefinition Height="25"/>
+                                </Grid.RowDefinitions>
+                                <Label Grid.Column="0" Grid.Row="0" BackgroundColor="Transparent" Text="{Binding shortKey111}" FontSize="14" TextColor="Black" WidthRequest="45" HeightRequest="25" Margin="2,2,2,2">
+                                    <Label.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="OnClicked"/>
+                                    </Label.GestureRecognizers>
+                                </Label>
+                                <Label Grid.Column="1" BackgroundColor="Transparent" Text="{Binding shortKey112}" FontSize="14" TextColor="Black" WidthRequest="45" HeightRequest="25" Margin="2,2,2,2">
+                                    <Label.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="OnClicked"/>
+                                    </Label.GestureRecognizers>
+                                </Label>
+                            </Grid>
+                        </StackLayout>
+
+                        <StackLayout Grid.Row="12" BackgroundColor="#ACB4C7" WidthRequest="10" HeightRequest="20">
+                            <Grid HeightRequest="25">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="40"/>
+                                    <ColumnDefinition Width="40"/>
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="25"/>
+                                    <RowDefinition Height="25"/>
+                                </Grid.RowDefinitions>
+                                <Label Grid.Column="0" Grid.Row="0" BackgroundColor="Transparent" Text="{Binding shortKey121}" FontSize="14" TextColor="Black" WidthRequest="45" HeightRequest="25" Margin="2,2,2,2">
+                                    <Label.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="OnClicked"/>
+                                    </Label.GestureRecognizers>
+                                </Label>
+                                <Label Grid.Column="1" BackgroundColor="Transparent" Text="{Binding shortKey122}" FontSize="14" TextColor="Black" WidthRequest="45" HeightRequest="25" Margin="2,2,2,2">
+                                    <Label.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="OnClicked"/>
+                                    </Label.GestureRecognizers>
+                                </Label>
+                            </Grid>
+                        </StackLayout>
+
+                        <StackLayout Grid.Row="13" BackgroundColor="#ACB4C7" WidthRequest="10" HeightRequest="20">
+                            <Grid HeightRequest="25">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="40"/>
+                                    <ColumnDefinition Width="40"/>
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="25"/>
+                                    <RowDefinition Height="25"/>
+                                </Grid.RowDefinitions>
+                                <Label Grid.Column="0" Grid.Row="0" BackgroundColor="Transparent" Text="{Binding shortKey131}" FontSize="14" TextColor="Black" WidthRequest="45" HeightRequest="25" Margin="2,2,2,2">
+                                    <Label.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="OnClicked"/>
+                                    </Label.GestureRecognizers>
+                                </Label>
+                                <Label Grid.Column="1" BackgroundColor="Transparent" Text="{Binding shortKey132}" FontSize="14" TextColor="Black" WidthRequest="45" HeightRequest="25" Margin="2,2,2,2">
+                                    <Label.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="OnClicked"/>
+                                    </Label.GestureRecognizers>
+                                </Label>
+                            </Grid>
+                        </StackLayout>
+
+                        <StackLayout Grid.Row="15" BackgroundColor="#ACB4C7" WidthRequest="10" HeightRequest="20">
+                            <Grid HeightRequest="25">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="40"/>
+                                    <ColumnDefinition Width="40"/>
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="25"/>
+                                    <RowDefinition Height="25"/>
+                                </Grid.RowDefinitions>
+                                <Label Grid.Column="0" Grid.Row="0" BackgroundColor="Transparent" Text="{Binding shortKey151}" FontSize="14" TextColor="Black" WidthRequest="45" HeightRequest="25" Margin="2,2,2,2">
+                                    <Label.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="OnClicked"/>
+                                    </Label.GestureRecognizers>
+                                </Label>
+                                <Label Grid.Column="1" BackgroundColor="Transparent" Text="{Binding shortKey152}" FontSize="14" TextColor="Black" WidthRequest="45" HeightRequest="25" Margin="2,2,2,2">
+                                    <Label.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="OnClicked"/>
+                                    </Label.GestureRecognizers>
+                                </Label>
+                            </Grid>
+                        </StackLayout>
+
+                        <StackLayout Grid.Row="16" BackgroundColor="#ACB4C7" WidthRequest="10" HeightRequest="20">
+                            <Grid HeightRequest="25">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="40"/>
+                                    <ColumnDefinition Width="40"/>
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="25"/>
+                                    <RowDefinition Height="25"/>
+                                </Grid.RowDefinitions>
+                                <Label Grid.Column="0" Grid.Row="0" BackgroundColor="Transparent" Text="{Binding shortKey161}" FontSize="14" TextColor="Black" WidthRequest="45" HeightRequest="25" Margin="2,2,2,2">
+                                    <Label.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="OnClicked"/>
+                                    </Label.GestureRecognizers>
+                                </Label>
+                                <Label Grid.Column="1" BackgroundColor="Transparent" Text="{Binding shortKey162}" FontSize="14" TextColor="Black" WidthRequest="45" HeightRequest="25" Margin="2,2,2,2">
+                                    <Label.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="OnClicked"/>
+                                    </Label.GestureRecognizers>
+                                </Label>
+                            </Grid>
+                        </StackLayout>
+
+                        <StackLayout Grid.Row="18" BackgroundColor="#ACB4C7" WidthRequest="10" HeightRequest="20">
+                            <Grid HeightRequest="25">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="40"/>
+                                    <ColumnDefinition Width="40"/>
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="25"/>
+                                    <RowDefinition Height="25"/>
+                                </Grid.RowDefinitions>
+                                <Label Grid.Column="0" Grid.Row="0" BackgroundColor="Transparent" Text="{Binding shortKey181}" FontSize="14" TextColor="Black" WidthRequest="45" HeightRequest="25" Margin="2,2,2,2">
+                                    <Label.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="OnClicked"/>
+                                    </Label.GestureRecognizers>
+                                </Label>
+                                <Label Grid.Column="1" BackgroundColor="Transparent" Text="{Binding shortKey182}" FontSize="14" TextColor="Black" WidthRequest="45" HeightRequest="25" Margin="2,2,2,2">
+                                    <Label.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="OnClicked"/>
+                                    </Label.GestureRecognizers>
+                                </Label>
+                            </Grid>
+                        </StackLayout>
+
+                        <StackLayout Grid.Row="19" BackgroundColor="#ACB4C7" WidthRequest="10" HeightRequest="20">
+                            <Grid HeightRequest="25">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="40"/>
+                                    <ColumnDefinition Width="40"/>
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="25"/>
+                                    <RowDefinition Height="25"/>
+                                </Grid.RowDefinitions>
+                                <Label Grid.Column="0" Grid.Row="0" BackgroundColor="Transparent" Text="{Binding shortKey191}" FontSize="14" TextColor="Black" WidthRequest="45" HeightRequest="25" Margin="2,2,2,2">
+                                    <Label.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="OnClicked"/>
+                                    </Label.GestureRecognizers>
+                                </Label>
+                                <Label Grid.Column="1" BackgroundColor="Transparent" Text="{Binding shortKey192}" FontSize="14" TextColor="Black" WidthRequest="45" HeightRequest="25" Margin="2,2,2,2">
+                                    <Label.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="OnClicked"/>
+                                    </Label.GestureRecognizers>
+                                </Label>
+                            </Grid>
+                        </StackLayout>
+
+                        <StackLayout Grid.Row="20" BackgroundColor="#ACB4C7" WidthRequest="10" HeightRequest="20">
+                            <Grid HeightRequest="25">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="40"/>
+                                    <ColumnDefinition Width="40"/>
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="25"/>
+                                    <RowDefinition Height="25"/>
+                                </Grid.RowDefinitions>
+                                <Label Grid.Column="0" Grid.Row="0" BackgroundColor="Transparent" Text="{Binding shortKey201}" FontSize="14" TextColor="Black" WidthRequest="45" HeightRequest="25" Margin="2,2,2,2">
+                                    <Label.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="OnClicked"/>
+                                    </Label.GestureRecognizers>
+                                </Label>
+                                <Label Grid.Column="1" BackgroundColor="Transparent" Text="{Binding shortKey202}" FontSize="14" TextColor="Black" WidthRequest="45" HeightRequest="25" Margin="2,2,2,2">
+                                    <Label.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="OnClicked"/>
+                                    </Label.GestureRecognizers>
+                                </Label>
+                            </Grid>
+                        </StackLayout>
+
+                        <StackLayout Grid.Row="22" BackgroundColor="#ACB4C7" WidthRequest="10" HeightRequest="20">
+                            <Grid HeightRequest="25">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="40"/>
+                                    <ColumnDefinition Width="40"/>
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="25"/>
+                                    <RowDefinition Height="25"/>
+                                </Grid.RowDefinitions>
+                                <Label Grid.Column="0" Grid.Row="0" BackgroundColor="Transparent" Text="{Binding shortKey221}" FontSize="14" TextColor="Black" WidthRequest="45" HeightRequest="25" Margin="2,2,2,2">
+                                    <Label.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="OnClicked"/>
+                                    </Label.GestureRecognizers>
+                                </Label>
+                                <Label Grid.Column="1" BackgroundColor="Transparent" Text="{Binding shortKey222}" FontSize="14" TextColor="Black" WidthRequest="45" HeightRequest="25" Margin="2,2,2,2">
+                                    <Label.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="OnClicked"/>
+                                    </Label.GestureRecognizers>
+                                </Label>
+                            </Grid>
+                        </StackLayout>
+
+                        <StackLayout Grid.Row="23" BackgroundColor="#ACB4C7" WidthRequest="10" HeightRequest="20">
+                            <Grid HeightRequest="25">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="40"/>
+                                    <ColumnDefinition Width="40"/>
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="25"/>
+                                    <RowDefinition Height="25"/>
+                                </Grid.RowDefinitions>
+                                <Label Grid.Column="0" Grid.Row="0" BackgroundColor="Transparent" Text="{Binding shortKey231}" FontSize="14" TextColor="Black" WidthRequest="45" HeightRequest="25" Margin="2,2,2,2">
+                                    <Label.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="OnClicked"/>
+                                    </Label.GestureRecognizers>
+                                </Label>
+                                <Label Grid.Column="1" BackgroundColor="Transparent" Text="{Binding shortKey232}" FontSize="14" TextColor="Black" WidthRequest="45" HeightRequest="25" Margin="2,2,2,2">
+                                    <Label.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="OnClicked"/>
+                                    </Label.GestureRecognizers>
+                                </Label>
+                            </Grid>
+                        </StackLayout>
+
+                        <StackLayout Grid.Row="25" BackgroundColor="#ACB4C7" WidthRequest="10" HeightRequest="20">
+                            <Grid HeightRequest="25">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="40"/>
+                                    <ColumnDefinition Width="40"/>
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="25"/>
+                                    <RowDefinition Height="25"/>
+                                </Grid.RowDefinitions>
+                                <Label Grid.Column="0" Grid.Row="0" BackgroundColor="Transparent" Text="{Binding shortKey251}" FontSize="14" TextColor="Black" WidthRequest="45" HeightRequest="25" Margin="2,2,2,2">
+                                    <Label.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="OnClicked"/>
+                                    </Label.GestureRecognizers>
+                                </Label>
+                                <Label Grid.Column="1" BackgroundColor="Transparent" Text="{Binding shortKey252}" FontSize="14" TextColor="Black" WidthRequest="45" HeightRequest="25" Margin="2,2,2,2">
+                                    <Label.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="OnClicked"/>
+                                    </Label.GestureRecognizers>
+                                </Label>
+                            </Grid>
+                        </StackLayout>
+
+                        <StackLayout Grid.Row="26" BackgroundColor="#ACB4C7" WidthRequest="10" HeightRequest="20">
+                            <Grid HeightRequest="25">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="40"/>
+                                    <ColumnDefinition Width="40"/>
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="25"/>
+                                    <RowDefinition Height="25"/>
+                                </Grid.RowDefinitions>
+                                <Label Grid.Column="0" Grid.Row="0" BackgroundColor="Transparent" Text="{Binding shortKey261}" FontSize="14" TextColor="Black" WidthRequest="45" HeightRequest="25" Margin="2,2,2,2">
+                                    <Label.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="OnClicked"/>
+                                    </Label.GestureRecognizers>
+                                </Label>
+                                <Label Grid.Column="1" BackgroundColor="Transparent" Text="{Binding shortKey262}" FontSize="14" TextColor="Black" WidthRequest="45" HeightRequest="25" Margin="2,2,2,2">
+                                    <Label.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="OnClicked"/>
+                                    </Label.GestureRecognizers>
+                                </Label>
+                            </Grid>
+                        </StackLayout>
+
+                        <StackLayout Grid.Row="27" BackgroundColor="#ACB4C7" WidthRequest="10" HeightRequest="20">
+                            <Grid HeightRequest="25">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="40"/>
+                                    <ColumnDefinition Width="40"/>
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="25"/>
+                                    <RowDefinition Height="25"/>
+                                </Grid.RowDefinitions>
+                                <Label Grid.Column="0" Grid.Row="0" BackgroundColor="Transparent" Text="{Binding shortKey271}" FontSize="14" TextColor="Black" WidthRequest="45" HeightRequest="25" Margin="2,2,2,2">
+                                    <Label.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="OnClicked"/>
+                                    </Label.GestureRecognizers>
+                                </Label>
+                                <Label Grid.Column="1" BackgroundColor="Transparent" Text="{Binding shortKey272}" FontSize="14" TextColor="Black" WidthRequest="45" HeightRequest="25" Margin="2,2,2,2">
+                                    <Label.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="OnClicked"/>
+                                    </Label.GestureRecognizers>
+                                </Label>
+                            </Grid>
+                        </StackLayout>
+
+                        <StackLayout Grid.Row="29" BackgroundColor="#ACB4C7" WidthRequest="10" HeightRequest="20">
+                            <Grid HeightRequest="25">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="40"/>
+                                    <ColumnDefinition Width="40"/>
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="25"/>
+                                    <RowDefinition Height="25"/>
+                                </Grid.RowDefinitions>
+                                <Label Grid.Column="0" Grid.Row="0" BackgroundColor="Transparent" Text="{Binding shortKey291}" FontSize="14" TextColor="Black" WidthRequest="45" HeightRequest="25" Margin="2,2,2,2">
+                                    <Label.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="OnClicked"/>
+                                    </Label.GestureRecognizers>
+                                </Label>
+                                <Label Grid.Column="1" BackgroundColor="Transparent" Text="{Binding shortKey292}" FontSize="14" TextColor="Black" WidthRequest="45" HeightRequest="25" Margin="2,2,2,2">
+                                    <Label.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="OnClicked"/>
+                                    </Label.GestureRecognizers>
+                                </Label>
+                            </Grid>
+                        </StackLayout>
+
+                        <StackLayout Grid.Row="30" BackgroundColor="#ACB4C7" WidthRequest="10" HeightRequest="20">
+                            <Grid HeightRequest="25">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="40"/>
+                                    <ColumnDefinition Width="40"/>
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="25"/>
+                                    <RowDefinition Height="25"/>
+                                </Grid.RowDefinitions>
+                                <Label Grid.Column="0" Grid.Row="0" BackgroundColor="Transparent" Text="{Binding shortKey301}" FontSize="14" TextColor="Black" WidthRequest="45" HeightRequest="25" Margin="2,2,2,2">
+                                    <Label.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="OnClicked"/>
+                                    </Label.GestureRecognizers>
+                                </Label>
+                                <Label Grid.Column="1" BackgroundColor="Transparent" Text="{Binding shortKey302}" FontSize="14" TextColor="Black" WidthRequest="45" HeightRequest="25" Margin="2,2,2,2">
+                                    <Label.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="OnClicked"/>
+                                    </Label.GestureRecognizers>
+                                </Label>
+                            </Grid>
+                        </StackLayout>
+                    </Grid>
+
+                </Grid>
+            </ScrollView>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
